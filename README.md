@@ -88,4 +88,8 @@ The sidebar gives access to notes, reminders, memory, and conversation history s
 
 Add a demo video link here after recording the project walkthrough. The video should show starting the backend, opening the frontend, asking a voice question, sending a text command, and checking saved notes or reminders.
 
-Demo video: `https://github.com/user-attachments/assets/85497fdd-08a6-435c-a9f3-ace9db1cd801`
+Demo video: 
+
+https://github.com/user-attachments/assets/0bcbb42e-cf5a-4ce5-b18a-5ca654ea4447
+
+
