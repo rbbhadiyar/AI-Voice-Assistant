@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jarvis — AI Voice Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">J</div>
+        <span>JARVIS</span>
+      </div>
+      <nav>
+        <button class="nav-btn active" data-tab="chat">🎙️ Chat</button>
+        <button class="nav-btn" data-tab="notes">📝 Notes</button>
+        <button class="nav-btn" data-tab="reminders">⏰ Reminders</button>
+        <button class="nav-btn" data-tab="memory">🧠 Memory</button>
+        <button class="nav-btn" data-tab="history">📜 History</button>
+      </nav>
+      <div class="sidebar-status">
+        <div class="dot" id="statusDot"></div>
+        <span id="statusText">Ready</span>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Chat Tab -->
+      <div class="tab active" id="tab-chat">
+        <div class="chat-header">
+          <h2>AI Voice Assistant</h2>
+          <p>Powered by Groq · Whisper · gTTS</p>
+        </div>
+
+        <div class="mic-area">
+          <div class="mic-rings" id="micRings">
+            <div class="ring r1"></div>
+            <div class="ring r2"></div>
+            <div class="ring r3"></div>
+            <button id="micBtn" class="mic-btn">
+              <span class="mic-icon">🎤</span>
+              <span id="micLabel">Hold to Speak</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="text-row">
+          <input type="text" id="textInput" placeholder="Type a command or question..." />
+          <button id="sendBtn">➤</button>
+        </div>
+
+        <div class="response-card" id="responseCard" style="display:none">
+          <div class="response-you" id="transcriptEl"></div>
+          <div class="response-jarvis">
+            <span class="jarvis-tag">JARVIS</span>
+            <div id="responseText"></div>
+          </div>
+          <div class="playing-bar" id="playingBar" style="display:none">
+            <span class="bar b1"></span><span class="bar b2"></span>
+            <span class="bar b3"></span><span class="bar b4"></span>
+            <span class="bar b5"></span>
+            <span>Speaking...</span>
+          </div>
+        </div>
+
+        <div class="quick-cmds">
+          <p class="quick-label">Quick Commands</p>
+          <div class="quick-grid">
+            <button class="qbtn" data-cmd="What's the latest tech news?">🌐 Tech News</button>
+            <button class="qbtn" data-cmd="What are my notes?">📝 My Notes</button>
+            <button class="qbtn" data-cmd="What are my reminders?">⏰ Reminders</button>
+            <button class="qbtn" data-cmd="What's the weather today?">🌤️ Weather</button>
+            <button class="qbtn" data-cmd="Open YouTube">▶️ YouTube</button>
+            <button class="qbtn" data-cmd="Open calculator">🧮 Calculator</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notes Tab -->
+      <div class="tab" id="tab-notes">
+        <div class="tab-header">
+          <h2>📝 Notes</h2>
+          <p>Say "Take a note: [title] — [content]" to create notes</p>
+        </div>
+        <div id="notesList" class="card-list">Loading...</div>
+      </div>
+
+      <!-- Reminders Tab -->
+      <div class="tab" id="tab-reminders">
+        <div class="tab-header">
+          <h2>⏰ Reminders</h2>
+          <p>Say "Remind me to [task] at [time]" to set reminders</p>
+        </div>
+        <div id="remindersList" class="card-list">Loading...</div>
+      </div>
+
+      <!-- Memory Tab -->
+      <div class="tab" id="tab-memory">
+        <div class="tab-header">
+          <h2>🧠 Memory</h2>
+          <p>Say "Remember I like [topic]" to store preferences</p>
+        </div>
+        <div id="memoryList" class="card-list">Loading...</div>
+      </div>
+
+      <!-- History Tab -->
+      <div class="tab" id="tab-history">
+        <div class="tab-header">
+          <h2>📜 Conversation History</h2>
+          <p>Last 30 interactions</p>
+        </div>
+        <div id="historyList" class="card-list">Loading...</div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

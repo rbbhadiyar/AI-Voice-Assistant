@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+openai-whisper
+gtts
+groq
+langchain-tavily
+tavily-python
+python-dotenv
+python-multipart
+pydantic
