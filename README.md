@@ -86,10 +86,8 @@ The sidebar gives access to notes, reminders, memory, and conversation history s
 
 ## Video Demo
 
-Add a demo video link here after recording the project walkthrough. The video should show starting the backend, opening the frontend, asking a voice question, sending a text command, and checking saved notes or reminders.
+This demo shows the AI Voice Assistant running locally with its Jarvis-style interface. It demonstrates the main assistant screen, voice/text interaction flow, spoken responses, quick commands, and the supporting views for notes, reminders, memory, and conversation history.
 
-Demo video: 
+Demo video:
 
 https://github.com/user-attachments/assets/0bcbb42e-cf5a-4ce5-b18a-5ca654ea4447
-
-
